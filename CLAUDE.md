@@ -39,7 +39,7 @@ React 19 SPA with client-side rendering (CSR). Vite 6 handles bundling and dev s
 
 ### Testing
 
-Playwright config (`playwright.config.ts`) targets `http://localhost:4173` (preview server). Tests run against Desktop Chromium (1280×720) and Mobile iPhone 12. The preview server auto-starts via `webServer` config. Build before running tests.
+Playwright config (`playwright.config.ts`) targets `http://localhost:4173` (preview server). Tests run against Desktop Chromium (1280×720) and Mobile iPhone 16. The preview server auto-starts via `webServer` config. Build before running tests.
 
 ## Package manager
 

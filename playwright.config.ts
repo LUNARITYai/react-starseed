@@ -17,9 +17,9 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 720 } },
     },
     {
-      name: "Mobile iPhone 12",
+      name: "Mobile iPhone 16",
       use: {
-        ...devices["iPhone 12"],
+        ...devices["iPhone 16"],
         defaultBrowserType: "chromium",
       },
     },
