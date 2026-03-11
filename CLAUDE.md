@@ -19,6 +19,7 @@ pnpm test:e2e:install     # Install Chromium for Playwright
 ```
 
 Run a single Playwright test file:
+
 ```bash
 pnpm exec playwright test tests/my-test.spec.ts
 ```

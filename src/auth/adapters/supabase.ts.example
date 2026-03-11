@@ -1,0 +1,94 @@
+/**
+ * Example Supabase adapter.
+ *
+ * Install Supabase:
+ *   pnpm add @supabase/supabase-js
+ *
+ * Set environment variables:
+ *   VITE_SUPABASE_URL=https://your-project.supabase.co
+ *   VITE_SUPABASE_ANON_KEY=your-anon-key
+ *
+ * Then copy this file to `supabase.ts` and adjust to your setup.
+ */
+
+import type { AuthAdapter, Session } from "../types";
+
+// import { createClient } from "@supabase/supabase-js";
+
+// const supabase = createClient(
+//   import.meta.env.VITE_SUPABASE_URL,
+//   import.meta.env.VITE_SUPABASE_ANON_KEY,
+// );
+
+export class SupabaseAuthAdapter implements AuthAdapter {
+  async signIn(email: string, password: string): Promise<Session> {
+    // const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    // if (error) throw new Error(error.message);
+    // return { user: { id: data.user.id, email: data.user.email! }, token: data.session.access_token };
+    throw new Error("Not implemented — see comments above");
+  }
+
+  async signUp(
+    email: string,
+    password: string,
+    name?: string,
+  ): Promise<Session> {
+    // const { data, error } = await supabase.auth.signUp({
+    //   email, password, options: { data: { name } },
+    // });
+    // if (error) throw new Error(error.message);
+    // return { user: { id: data.user!.id, email: data.user!.email! }, token: data.session!.access_token };
+    throw new Error("Not implemented — see comments above");
+  }
+
+  async signOut(): Promise<void> {
+    // await supabase.auth.signOut();
+    throw new Error("Not implemented");
+  }
+
+  async getSession(): Promise<Session | null> {
+    // const { data } = await supabase.auth.getSession();
+    // if (!data.session) return null;
+    // const user = data.session.user;
+    // return { user: { id: user.id, email: user.email! }, token: data.session.access_token };
+    throw new Error("Not implemented");
+  }
+
+  async resetPasswordRequest(email: string): Promise<void> {
+    // await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` });
+    throw new Error("Not implemented");
+  }
+
+  async resetPassword(_token: string, newPassword: string): Promise<void> {
+    // await supabase.auth.updateUser({ password: newPassword });
+    throw new Error("Not implemented");
+  }
+
+  async signInWithOAuth(provider: string): Promise<void> {
+    // await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: `${window.location.origin}/auth/callback` } });
+    throw new Error("Not implemented");
+  }
+
+  async handleOAuthCallback(
+    _params: Record<string, string>,
+  ): Promise<Session> {
+    throw new Error("Not implemented");
+  }
+
+  async signInWithMagicLink(email: string): Promise<void> {
+    // await supabase.auth.signInWithOtp({ email });
+    throw new Error("Not implemented");
+  }
+
+  async verifyMagicLink(_token: string): Promise<Session> {
+    throw new Error("Not implemented");
+  }
+
+  async signInWithPasskey(): Promise<Session> {
+    throw new Error("Not implemented");
+  }
+
+  async registerPasskey(): Promise<void> {
+    throw new Error("Not implemented");
+  }
+}
