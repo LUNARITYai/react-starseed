@@ -4,7 +4,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border py-8">
       <div className="mx-auto max-w-5xl px-4 text-center text-sm text-muted-foreground">
-        &copy; {new Date().getFullYear()} {APP_NAME}. Crafted with &hearts; by{" "}
+        &copy; {new Date().getFullYear()} <strong>{APP_NAME}</strong>. Crafted
+        with &hearts; by{" "}
         <a
           href={APP_AUTHOR_URL}
           target="_blank"
