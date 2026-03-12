@@ -3,9 +3,7 @@ import { useTheme } from "@/hooks/useTheme";
 import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme, mounted } = useTheme();
-
-  if (!mounted) return null;
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <Button variant="ghost" size="icon" onClick={toggleTheme}>

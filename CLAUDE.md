@@ -11,6 +11,8 @@ pnpm preview              # Preview production build at http://localhost:4173
 
 pnpm format               # Prettier (write)
 pnpm format:check         # Prettier (check only)
+pnpm lint                 # ESLint check
+pnpm lint:fix             # ESLint auto-fix
 
 pnpm test:e2e             # Playwright E2E (headless)
 pnpm test:e2e:ui          # Playwright with UI
@@ -37,6 +39,7 @@ React 19 SPA with client-side rendering (CSR). Vite 6 handles bundling and dev s
 - **Components** — `src/components/ui/` contains shadcn/ui primitives (do not edit manually; use the shadcn CLI to add/update). Custom components live directly in `src/components/`.
 - **Utilities** — `src/lib/utils.ts` exports `cn()` (clsx + tailwind-merge). Always use `cn()` for conditional class merging.
 - **Theming** — `src/hooks/useTheme.ts` manages dark/light mode. State is stored in `localStorage` and applied via the `.dark` class on `<html>`. Flash prevention is handled by an inline script in `index.html`.
+- **Linting** — ESLint 9 with flat config (`eslint.config.ts`). Plugins: typescript-eslint, react-hooks, jsx-a11y. Prettier integration via eslint-config-prettier. Pre-commit hooks (husky + lint-staged) auto-fix and format staged files.
 
 ### Testing
 
