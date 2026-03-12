@@ -4,7 +4,7 @@ test.describe("Home page", () => {
   test("should display site name and tagline", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("h1")).toContainText("React Starseed");
-    await expect(page.locator("text=Built with React")).toBeVisible();
+    await expect(page.locator("text=A modern React starter")).toBeVisible();
   });
 });
 
