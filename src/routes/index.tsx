@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SITE_NAME, SITE_TAGLINE } from "@/site.config";
+import { APP_NAME, APP_TAGLINE } from "@/app.config";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -25,9 +25,9 @@ function HomePage() {
     <div className="flex flex-1 items-center justify-center px-4">
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          {SITE_NAME}
+          {APP_NAME}
         </h1>
-        <p className="mt-6 text-lg text-muted-foreground">{SITE_TAGLINE}</p>
+        <p className="mt-6 text-lg text-muted-foreground">{APP_TAGLINE}</p>
         <p className="mt-4 text-sm text-muted-foreground">
           Built with{" "}
           {techStack.map((tech, i) => (
