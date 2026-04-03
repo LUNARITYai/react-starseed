@@ -21,7 +21,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@tanstack/react-query": "^5.72.2",
     "@tanstack/react-router": "^1.114.3",
-    "axios": "^1.8.4",
+    "axios": "1.13.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.483.0",
